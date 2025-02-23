@@ -15,17 +15,17 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    rollupOptions: {
-      external: [
-        "react",
-        "react-dom",
-        "tailwindcss",
-        "vite",
-        "@vitejs/plugin-react",
-        "react-router-dom",
-        "@tailwindcss/vite",
-      ],
-    },
-  },
+//   build: {
+//     rollupOptions: {
+//       external: [
+//         "react",
+//         "react-dom",
+//         "tailwindcss",
+//         "vite",
+//         "@vitejs/plugin-react",
+//         "react-router-dom",
+//         "@tailwindcss/vite",
+//       ],
+//     },
+//   },
 });
