@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import img1 from '../../assets/img1.png'
 import Card from "../../components/Card";
-import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance.js";
 
 
 const Home = () => {
-  const [posts, setPosts] = useState([]); // Store blogs from API
+  const [posts, setPosts] = useState([]); 
 
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 4; // Number of posts per page
+  const postsPerPage = 4; 
 
   useEffect(() => {
     const fetchBlogs = async () => {
