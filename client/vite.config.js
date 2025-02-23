@@ -17,7 +17,15 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ["react", "react-dom"], // Externalizing modules to prevent errors
+      external: [
+        "react",
+        "react-dom",
+        "tailwindcss",
+        "vite",
+        "@vitejs/plugin-react",
+        "react-router-dom",
+        "@tailwindcss/vite",
+      ],
     },
   },
 });
