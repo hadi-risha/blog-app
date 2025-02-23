@@ -19,7 +19,8 @@
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "react-router-dom": "^7.2.0",
-    "tailwindcss": "^4.0.7"
+    "tailwindcss": "^4.0.7",
+    "user-blog-managementplatform": "file:.."
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

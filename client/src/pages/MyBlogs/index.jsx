@@ -7,13 +7,15 @@ import axiosInstance from "../../utils/axiosInstance.js";
 
 const MyBlogs = () => {
   const [posts, setPosts] = useState([]); // Store blogs from API
-  
+  const [loading, setLoading] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 4; // Number of posts per page
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
+        setLoading(true);
         const response = await axiosInstance.get("/my-blogs"); // Fetch from backend
         console.log("Fetched blogs:", response.data.blogs);
         setPosts(response.data.blogs); // Store blogs in state

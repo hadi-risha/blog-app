@@ -17,7 +17,6 @@ const MyBlogCard = ({ title, content, date, image, _id }) => {
              before:transition-opacity before:duration-500"
       onClick={handleClick}
     >
-    
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img
@@ -30,7 +29,7 @@ const MyBlogCard = ({ title, content, date, image, _id }) => {
           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
             {title}
           </div>
-          <p className="mt-2 text-gray-500">{content}</p>
+          <p className="mt-2 text-gray-500 line-clamp-5">{content}</p>
           <div className="mt-4">
             <div className="text-sm text-gray-600">Date: {date}</div>
             {/* <div className="text-sm text-gray-600">Author: {author}</div> */}

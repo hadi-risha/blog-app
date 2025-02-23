@@ -12,6 +12,7 @@ import logger from "./utils/logger.js";
 import errorHandler from "./middleware/errorHandler.js";
 import "./utils/logCleaner.js";
 import connectDB from "./config/db.js";
+import path from "path";
 
 
 connectDB();
@@ -19,6 +20,8 @@ const app = express();
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
+
+const __dirname = path.resolve();
 
 
 const corsOptions = {
@@ -50,13 +53,27 @@ if (!process.env.MONGO_URL) {
 }
 
 
-app.get("/", (req, res) => {
-//   res.send("hello world....");
-  res.status(200).json({ message: "hello from home", text: "hlo world" });
+// Middleware for CSP (Fix S3 Image Loading)
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; img-src 'self' data: https://mentor-hub.s3.ap-south-1.amazonaws.com;"
+  );
+  next();
 });
+
+
+// app.get("/", (req, res) => {
+//   res.status(200).json({ message: "hello from home", text: "hlo world" });
+// });
 
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+
+app.use(express.static(path.join(__dirname, "/client/dist")));
+app.get("*", (req,res) => {
+  res.sendFile(path.join(__dirname, "/client", "dist", "index.html"));
+})
 
 
 app.listen(PORT, () =>
@@ -68,3 +85,5 @@ app.use(errorHandler);
 
 // npm run dev - (from frontend dir)
 // npm run server - from root dir
+
+// after deploy to run this whole app - npm start from root ( to build front in back -> npm run build, from root)
