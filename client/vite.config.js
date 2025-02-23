@@ -9,23 +9,24 @@ export default defineConfig({
     port: 4000,
     proxy: {
       "/api": {
-        target: "http://localhost:7000",
+        // target: "http://localhost:7000",
+        target: "https://blog-app-mvyw.onrender.com",
         changeOrigin: true, // Helps with CORS issues
         secure: false, // Allows HTTP connections
       },
     },
   },
-//   build: {
-//     rollupOptions: {
-//       external: [
-//         "react",
-//         "react-dom",
-//         "tailwindcss",
-//         "vite",
-//         "@vitejs/plugin-react",
-//         "react-router-dom",
-//         "@tailwindcss/vite",
-//       ],
-//     },
-//   },
+  //   build: {
+  //     rollupOptions: {
+  //       external: [
+  //         "react",
+  //         "react-dom",
+  //         "tailwindcss",
+  //         "vite",
+  //         "@vitejs/plugin-react",
+  //         "react-router-dom",
+  //         "@tailwindcss/vite",
+  //       ],
+  //     },
+  //   },
 });
