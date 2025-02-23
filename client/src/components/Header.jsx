@@ -78,7 +78,7 @@ const Header = () => {
           <div className="relative group" onClick={toggleMenu}>
             <div
               className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-white 
-                           transition-colors duration-300 hover:border-transparent"
+                           transition-colors duration-300 hover:border-transparent cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -98,7 +98,7 @@ const UpdateBlog = () => {
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-8">
         <button
           onClick={() => navigate(-1)}
-          className="mb-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-300"
+          className="mb-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-300 cursor-pointer"
         >
           Go Back
         </button>
@@ -156,7 +156,7 @@ const UpdateBlog = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors duration-300"
+              className="px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors duration-300 cursor-pointer"
             >
               Save Changes
             </button>

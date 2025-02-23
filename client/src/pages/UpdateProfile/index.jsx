@@ -108,9 +108,7 @@ const UpdateProfile = () => {
             </svg>
           </Link>
 
-          <h2 class="text-2xl font-bold text-white mb-3">
-            Update Profile
-          </h2>
+          <h2 class="text-2xl font-bold text-white mb-3">Update Profile</h2>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -269,7 +267,7 @@ const UpdateProfile = () => {
           <div className="mt-10 flex justify-center">
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-600 via-purple-400 to-blue-500 text-white px-4 py-2 font-bold rounded-full hover:opacity-80"
+              className="bg-gradient-to-r from-purple-600 via-purple-400 to-blue-500 text-white px-4 py-2 font-bold rounded-full hover:opacity-80 cursor-pointer"
             >
               Update Profile
             </button>
