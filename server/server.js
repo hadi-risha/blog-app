@@ -57,7 +57,7 @@ if (!process.env.MONGO_URL) {
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; img-src 'self' data: https://mentor-hub.s3.ap-south-1.amazonaws.com;"
+    "default-src 'self'; img-src 'self' data: https://mernblogapp-745531.s3.eu-north-1.amazonaws.com;",
   );
   next();
 });
